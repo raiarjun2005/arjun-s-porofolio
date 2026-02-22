@@ -78,7 +78,7 @@ export default function HeroSection() {
             >
                 {/* White aur Orange ka combo */}
                 <Box component="span" sx={{ color: 'white' }}>Rai</Box>
-                <Box component="span" sx={{ color: '#df6830' }}>63......!</Box>
+                <Box component="span" sx={{ color: '#df6830' }}>63!</Box>
             </Typography>
 
             <Typography
