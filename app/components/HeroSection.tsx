@@ -24,17 +24,22 @@ export default function HeroSection() {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                px: 2
+                // Mobile pe thoda zyada padding taaki text edges se na chipke
+                px: { xs: 3, md: 2 } 
             }}
         >
             <Typography
                 variant="h6"
                 sx={{
-                    color: '#gray.500',
+                    color: 'grey.500', // '#' hata diya hai yahan se
                     fontWeight: 'light',
                     mt: 2,
                     textAlign: 'center',
-                    fontFamily: quicksand.style.fontFamily
+                    fontFamily: quicksand.style.fontFamily,
+                    textTransform: 'uppercase', // Thoda premium look ke liye
+                    // Mobile pe font chota aur letter spacing kam
+                    fontSize: { xs: '0.85rem', md: '1.25rem' },
+                    letterSpacing: { xs: 2, md: 3 }
                 }}
             >
                 Welcome To My Space
@@ -47,26 +52,29 @@ export default function HeroSection() {
                     fontWeight: 'bold',
                     mt: 2,
                     textAlign: 'center',
-                    fontFamily: quicksand.style.fontFamily
+                    fontFamily: quicksand.style.fontFamily,
+                    // YAHAN HUA HAI MAGIC: h1 ko mobile pe 2.5rem aur PC pe 5rem kar diya
+                    fontSize: { xs: '2.8rem', sm: '3.5rem', md: '5rem' },
+                    lineHeight: 1.2
                 }}
             >
                 I Build Digital Experiences
             </Typography>
 
-           
             <Typography
                 sx={{
                     color: 'grey.400',
                     maxWidth: '600px', 
                     textAlign: 'center',
-                    mt: 3,
-                    mb: 4, 
+                    mt: { xs: 2, md: 3 },
+                    mb: { xs: 3, md: 4 }, 
                     fontFamily: quicksand.style.fontFamily,
-                    fontSize: '1.1rem',
+                    // Mobile pe text thoda chota aur line height adjust ki hai
+                    fontSize: { xs: '0.95rem', md: '1.1rem' },
                     lineHeight: 1.6
                 }}
             >
-                Crafting elegant digital solutions through innovative web applications and intelligent systems.
+                Engineering scalable web and mobile applications that solve real-world problems.
             </Typography>
 
             <Button
@@ -75,8 +83,9 @@ export default function HeroSection() {
                     bgcolor: '#df6830',
                     color: 'white',
                     borderRadius: '30px', 
-                    px: 4, 
-                    py: 1.5, 
+                    // Button ki padding bhi mobile pe thodi compact kar di
+                    px: { xs: 3, md: 4 }, 
+                    py: { xs: 1.2, md: 1.5 }, 
                     fontWeight: 'bold', 
                     fontFamily: quicksand.style.fontFamily,
                     
@@ -92,8 +101,8 @@ export default function HeroSection() {
                 Explore My Work
             </Button>
 
-           
-            <Stack direction="row" spacing={3} sx={{ mt: 5 }}>
+            {/* Mobile pe icons ka top margin thoda kam kar diya */}
+            <Stack direction="row" spacing={3} sx={{ mt: { xs: 4, md: 5 } }}>
                 <IconButton sx={{ color: 'grey.600', transition: 'all 0.3s ease', '&:hover': { color: '#df6830', transform: 'translateY(-3px)' } }}>
                     <GitHubIcon />
                 </IconButton>
