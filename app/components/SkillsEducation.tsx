@@ -20,7 +20,7 @@ const skillCategories = [
   },
   {
     title: "Workflow & Tools",
-    skills: ["AI-Assisted Dev", "Vercel", "Git"],
+    skills: ["AI-Assisted Dev", "Vercel", "Git",""],
   },
 ];
 
