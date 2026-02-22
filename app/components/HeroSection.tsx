@@ -24,20 +24,18 @@ export default function HeroSection() {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                // Mobile pe thoda zyada padding taaki text edges se na chipke
                 px: { xs: 3, md: 2 } 
             }}
         >
             <Typography
                 variant="h6"
                 sx={{
-                    color: 'grey.500', // '#' hata diya hai yahan se
+                    color: 'grey.500', 
                     fontWeight: 'light',
                     mt: 2,
                     textAlign: 'center',
                     fontFamily: quicksand.style.fontFamily,
-                    textTransform: 'uppercase', // Thoda premium look ke liye
-                    // Mobile pe font chota aur letter spacing kam
+                    textTransform: 'uppercase',
                     fontSize: { xs: '0.85rem', md: '1.25rem' },
                     letterSpacing: { xs: 2, md: 3 }
                 }}
@@ -53,7 +51,7 @@ export default function HeroSection() {
                     mt: 2,
                     textAlign: 'center',
                     fontFamily: quicksand.style.fontFamily,
-                    // YAHAN HUA HAI MAGIC: h1 ko mobile pe 2.5rem aur PC pe 5rem kar diya
+                  
                     fontSize: { xs: '2.8rem', sm: '3.5rem', md: '5rem' },
                     lineHeight: 1.2
                 }}
@@ -69,7 +67,6 @@ export default function HeroSection() {
                     mt: { xs: 2, md: 3 },
                     mb: { xs: 3, md: 4 }, 
                     fontFamily: quicksand.style.fontFamily,
-                    // Mobile pe text thoda chota aur line height adjust ki hai
                     fontSize: { xs: '0.95rem', md: '1.1rem' },
                     lineHeight: 1.6
                 }}
@@ -83,7 +80,6 @@ export default function HeroSection() {
                     bgcolor: '#df6830',
                     color: 'white',
                     borderRadius: '30px', 
-                    // Button ki padding bhi mobile pe thodi compact kar di
                     px: { xs: 3, md: 4 }, 
                     py: { xs: 1.2, md: 1.5 }, 
                     fontWeight: 'bold', 
@@ -101,7 +97,6 @@ export default function HeroSection() {
                 Explore My Work
             </Button>
 
-            {/* Mobile pe icons ka top margin thoda kam kar diya */}
             <Stack direction="row" spacing={3} sx={{ mt: { xs: 4, md: 5 } }}>
                 <IconButton sx={{ color: 'grey.600', transition: 'all 0.3s ease', '&:hover': { color: '#df6830', transform: 'translateY(-3px)' } }}>
                     <GitHubIcon />
