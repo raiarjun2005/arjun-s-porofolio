@@ -4,14 +4,19 @@ import { Quicksand } from "next/font/google";
 
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["500", "700"] });
 
+const slideUpAnimation = {
+  "0%": { opacity: 0, transform: "translateY(60px)" },
+  "100%": { opacity: 1, transform: "translateY(0)" },
+};
+
 const skillCategories = [
   {
     title: "Web & Frontend",
-    skills: ["Next.js", "React", "TypeScript", "MUI", "Tailwind CSS","HTML","CSS","JavaScript","ShadCN","ElectronJS"],
+    skills: ["Next.js", "React", "TypeScript", "MUI", "Tailwind CSS", "HTML", "CSS", "JavaScript", "ShadCN", "ElectronJS"],
   },
   {
     title: "App & Backend",
-    skills: ["Flutter", "Firebase", "Node.js","Java","Kotlin"],
+    skills: ["Flutter", "Firebase", "Node.js", "Java", "Kotlin"],
   },
   {
     title: "Workflow & Tools",
@@ -22,12 +27,12 @@ const skillCategories = [
 const myJourney = [
   {
     year: "2024 - 2025",
-    title: "NIELIT 'O' ",
+    title: "NIELIT 'O'",
     desc: "Persued O Level Course Offered by NIELIT - National Institute Of Electronics And Information Technology",
   },
   {
     year: "2026-2029",
-    title: "Bachelor's Of Computer Application ",
+    title: "Bachelor's Of Computer Application",
     desc: "Persuing Bachelor Of Computer Applications From Manipal University-Jaipur In Online Mode",
   },
 ];
@@ -44,8 +49,7 @@ export default function SkillsEducation() {
               fontFamily: quicksand.style.fontFamily,
               mb: 4,
               fontWeight: "bold",
-                            textAlign: { xs: "center", md: "left" },
-
+              textAlign: { xs: "center", md: "left" },
             }}
           >
             My Journey
@@ -63,10 +67,17 @@ export default function SkillsEducation() {
                 position: "relative",
                 overflow: "hidden",
                 transition: "all 0.3s ease",
+                opacity: 0,
+                animation: "slideUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
+                "@keyframes slideUp": slideUpAnimation,
+                animationDelay: `${index * 0.2 + 0.1}s`,
 
                 "&:hover": {
                   borderColor: "#df6830",
-                  textAlign: "center",
+                  // textAlign: "",
+                },
+                "&:hover .slide-content": {
+                  transform: "translateX(30px)",
                 },
               }}
             >
@@ -77,12 +88,17 @@ export default function SkillsEducation() {
                   top: 0,
                   bottom: 0,
                   width: "4px",
-
                   bgcolor: "#df6830",
                 }}
               />
 
-              <Box sx={{ pl: 2 }}>
+              <Box
+                className="slide-content"
+                sx={{
+                  pl: 2,
+                  transition: "transform 0.3s ease",
+                }}
+              >
                 <Typography
                   sx={{
                     color: "#df6830",
@@ -126,7 +142,6 @@ export default function SkillsEducation() {
               fontFamily: quicksand.style.fontFamily,
               mb: 4,
               fontWeight: "bold",
-              
               textAlign: { xs: "center", md: "left" },
             }}
           >
@@ -143,46 +158,60 @@ export default function SkillsEducation() {
                 borderRadius: "24px",
                 border: "1px solid rgba(255,255,255,0.05)",
                 transition: "all 0.3s ease",
+                opacity: 0,
+                animation: "slideUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards",
+                "@keyframes slideUp": slideUpAnimation,
+                animationDelay: `${(index + myJourney.length) * 0.2 + 0.1}s`,
 
                 "&:hover": {
                   borderColor: "#df6830",
                 },
+                "&:hover .slide-content": {
+                  transform: "translateX(30px)",
+                },
               }}
             >
-              <Typography
-                variant="h6"
+              <Box
+                className="slide-content"
                 sx={{
-                  color: "white",
-                  fontFamily: quicksand.style.fontFamily,
-                  mb: 2,
-                  fontWeight: "bold",
+                  transition: "transform 0.3s ease",
                 }}
               >
-                {category.title}
-              </Typography>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: "white",
+                    fontFamily: quicksand.style.fontFamily,
+                    mb: 2,
+                    fontWeight: "bold",
+                  }}
+                >
+                  {category.title}
+                </Typography>
 
-              <Box sx={{ display: "flex", gap: 1.5, flexWrap: "wrap" }}>
-                {category.skills.map((skill, i) => (
-                  <Chip
-                    key={i}
-                    label={skill}
-                    sx={{
-                      px: 1,
-                      py: 2,
-                      bgcolor: "rgba(255,255,255,0.03)",
-                      color: "grey.300",
-                      fontFamily: quicksand.style.fontFamily,
-                      border: "1px solid rgba(255,255,255,0.1)",
-                      transition: "all 0.3s ease",
+                <Box sx={{ display: "flex", gap: 1.5, flexWrap: "wrap" }}>
+                  {category.skills.map((skill, i) => (
+                    <Chip
+                      key={i}
+                      label={skill}
+                      sx={{
+                        px: 1,
+                        py: 2,
+                        bgcolor: "rgba(255,255,255,0.03)",
+                        color: "grey.300",
+                        fontFamily: quicksand.style.fontFamily,
+                        border: "1px solid rgba(255,255,255,0.1)",
+                        transition: "all 0.3s ease",
 
-                      "&:hover": {
-                        borderColor: "#df6830",
-                        color: "#ff1744",
-                        transform: "translateY(-3px)",
-                      },
-                    }}
-                  />
-                ))}
+                        "&:hover": {
+                          borderColor: "#df6830",
+                          color: "#ff1744",
+                          transform: "translateY(-3px)",
+                        },
+                      }}
+                    />
+                  ))}
+                </Box>
               </Box>
             </Paper>
           ))}
