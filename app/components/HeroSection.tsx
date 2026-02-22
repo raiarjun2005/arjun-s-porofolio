@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 
-const quicksand = Quicksand({ subsets: ['latin'], weight: ['500', '600', '700'] });
+const quicksand = Quicksand({ subsets: ['latin'], weight: ['700'] });
 
 export default function HeroSection() {
     return (

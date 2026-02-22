@@ -7,11 +7,11 @@ const quicksand = Quicksand({ subsets: ["latin"], weight: ["500", "700"] });
 const skillCategories = [
   {
     title: "Web & Frontend",
-    skills: ["Next.js", "React", "TypeScript", "MUI", "Tailwind CSS"],
+    skills: ["Next.js", "React", "TypeScript", "MUI", "Tailwind CSS","HTML","CSS","JavaScript","ShadCN","ElectronJS"],
   },
   {
     title: "App & Backend",
-    skills: ["Flutter", "Firebase", "Node.js"],
+    skills: ["Flutter", "Firebase", "Node.js","Java","Kotlin"],
   },
   {
     title: "Workflow & Tools",

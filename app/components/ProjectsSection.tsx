@@ -12,7 +12,7 @@ const myProjects = [
   },
   {
     name: "IMPEXMART",
-    desc: "Porter-style local bike delivery app limited to Delhi with a complete rider KYC system.",
+    desc: "Modern e-commerce store and clothing brand with high-end product catalog.",
     techStack: ["Shopify", "Liquid"],
   },
   {
