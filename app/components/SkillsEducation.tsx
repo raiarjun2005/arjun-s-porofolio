@@ -130,7 +130,7 @@ export default function SkillsEducation() {
               textAlign: { xs: "center", md: "left" },
             }}
           >
-            My Journey
+            Tech Arsenal
           </Typography>
 
           {skillCategories.map((category, index) => (
