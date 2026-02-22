@@ -49,7 +49,7 @@ export default function SkillsEducation() {
               fontFamily: quicksand.style.fontFamily,
               mb: 4,
               fontWeight: "bold",
-              textAlign: { xs: "center", md: "left" },
+              textAlign: { xs: "center", md: "center" },
             }}
           >
             My Journey
@@ -142,7 +142,7 @@ export default function SkillsEducation() {
               fontFamily: quicksand.style.fontFamily,
               mb: 4,
               fontWeight: "bold",
-              textAlign: { xs: "center", md: "left" },
+              textAlign: { xs: "center", md: "center" },
             }}
           >
             Tech Arsenal
