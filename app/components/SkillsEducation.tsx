@@ -5,23 +5,22 @@ import { Quicksand } from "next/font/google";
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["500", "700"] });
 
 const skillCategories = [
-  { 
-    title: "Web & Frontend", 
-    skills: ["Next.js", "React", "TypeScript", "MUI", "Tailwind CSS"] 
+  {
+    title: "Web & Frontend",
+    skills: ["Next.js", "React", "TypeScript", "MUI", "Tailwind CSS"],
   },
-  { 
-    title: "App & Backend", 
-    skills: ["Flutter", "Firebase", "Node.js"] 
+  {
+    title: "App & Backend",
+    skills: ["Flutter", "Firebase", "Node.js"],
   },
-  { 
-    title: "Workflow & Tools", 
-    skills: ["AI-Assisted Dev", "Vercel", "Git"] 
-  }
+  {
+    title: "Workflow & Tools",
+    skills: ["AI-Assisted Dev", "Vercel", "Git"],
+  },
 ];
 
 const myJourney = [
- 
-   {
+  {
     year: "2024 - 2025",
     title: "NIELIT 'O' ",
     desc: "Persued O Level Course Offered by NIELIT - National Institute Of Electronics And Information Technology",
@@ -37,7 +36,6 @@ export default function SkillsEducation() {
   return (
     <Box sx={{ py: 10, px: { xs: 2, md: 10 }, bgcolor: "#0a0a0a" }}>
       <Grid container spacing={4}>
-   
         <Grid size={{ xs: 12, md: 6 }}>
           <Typography
             variant="h4"
@@ -46,6 +44,8 @@ export default function SkillsEducation() {
               fontFamily: quicksand.style.fontFamily,
               mb: 4,
               fontWeight: "bold",
+                            textAlign: { xs: "center", md: "left" },
+
             }}
           >
             My Journey
@@ -77,12 +77,11 @@ export default function SkillsEducation() {
                   top: 0,
                   bottom: 0,
                   width: "4px",
-            
+
                   bgcolor: "#df6830",
                 }}
               />
 
-              
               <Box sx={{ pl: 2 }}>
                 <Typography
                   sx={{
@@ -119,7 +118,6 @@ export default function SkillsEducation() {
           ))}
         </Grid>
 
-       
         <Grid size={{ xs: 12, md: 6 }}>
           <Typography
             variant="h4"
@@ -128,25 +126,26 @@ export default function SkillsEducation() {
               fontFamily: quicksand.style.fontFamily,
               mb: 4,
               fontWeight: "bold",
+              
+              textAlign: { xs: "center", md: "left" },
             }}
           >
-            Tech Arsenal
+            My Journey
           </Typography>
 
-        
           {skillCategories.map((category, index) => (
             <Paper
               key={index}
               sx={{
                 p: 3,
-                mb: 3, 
+                mb: 3,
                 bgcolor: "#121212",
                 borderRadius: "24px",
                 border: "1px solid rgba(255,255,255,0.05)",
                 transition: "all 0.3s ease",
 
                 "&:hover": {
-                  borderColor:'#df6830'
+                  borderColor: "#df6830",
                 },
               }}
             >
@@ -176,7 +175,6 @@ export default function SkillsEducation() {
                       border: "1px solid rgba(255,255,255,0.1)",
                       transition: "all 0.3s ease",
 
-                   
                       "&:hover": {
                         borderColor: "#df6830",
                         color: "#ff1744",
