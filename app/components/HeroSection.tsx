@@ -131,7 +131,7 @@ export default function HeroSection() {
             <Stack direction="row" spacing={4} sx={{ mt: { xs: 6, md: 8 } }}>
                 {[
                     { icon: <GitHubIcon />, link: '#' },
-                    { icon: <LinkedInIcon />, link: '#' },
+                    { icon: <LinkedInIcon />, link: 'https://www.linkedin.com/in/arjun-rai-63g/' },
                     { icon: <EmailIcon />, link: '#' }
                 ].map((social, index) => (
                     <IconButton 
