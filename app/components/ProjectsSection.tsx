@@ -88,7 +88,7 @@ export default function ProjectsSection() {
               sx={{
                 p: { xs: 4, md: 5 },
                 bgcolor: "#0a0a0a",
-                borderRadius: "24px",
+                borderRadius: "80px", // for playground
                 border: "1px solid rgba(255,255,255,0.05)",
                 position: "relative",
                 height: "100%",
