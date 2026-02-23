@@ -6,26 +6,24 @@ import { Quicksand } from "next/font/google";
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["500", "700"] });
 const amgOrange = "#ff4d00";
 
-// --- Data for the switches ---
 const lockData = [
   { id: 1, title: "FRONT END", skills: "MUI // Next.js // Tailwind" },
   { id: 2, title: "CENTER LOCK", skills: "Flutter // Firebase // Dart" },
   { id: 3, title: "REAR END", skills: "Figma // Inkscape" },
 ];
 
-// Define keyframes for rotation
+
 const spin = {
   '0%': { transform: 'rotate(0deg)' },
   '100%': { transform: 'rotate(360deg)' },
 };
 
 const counterSpin = {
-  '0%': { transform: 'rotate(0deg) scaleX(-1)' }, // Keep it flipped horizontally
+  '0%': { transform: 'rotate(0deg) scaleX(-1)' }, 
   '100%': { transform: 'rotate(-360deg) scaleX(-1)' },
 };
 
 
-// --- Rocker Switch Component ---
 const RockerSwitch = ({ data }: { data: any }) => {
   const [isEngaged, setIsEngaged] = useState(false);
 
@@ -129,7 +127,7 @@ const RockerSwitch = ({ data }: { data: any }) => {
   );
 };
 
-// --- Main Section Component ---
+
 export default function DiffLockSection() {
   return (
     <Box
@@ -173,7 +171,7 @@ export default function DiffLockSection() {
           position: "relative",
           background: "linear-gradient(180deg, #161616 0%, #050505 100%)", 
           borderRadius: { xs: "24px", md: "80px", lg: "100px" },
-          // Adjusted padding to accommodate massive vents
+          
           p: { xs: 2, sm: 4, md: "60px 80px", lg: "80px 100px" },
           boxShadow:
             "0 40px 80px rgba(0,0,0,0.8), inset 0 2px 5px rgba(255,255,255,0.05)",
@@ -188,10 +186,10 @@ export default function DiffLockSection() {
           direction="row"
           alignItems="center"
           justifyContent="center"
-          // Slightly adjusted gap to balance the huge vents
+          
           spacing={{ xs: 1, sm: 3, md: 6, lg: 8 }}
         >
-          {/* LEFT VENT - MASSIVE SIZE UPGRADE */}
+      
           <Box
             component="img"
             src="/image.png"
@@ -205,7 +203,7 @@ export default function DiffLockSection() {
             }}
           />
 
-          {/* CENTRAL SWITCH PANEL */}
+        
           <Box
             sx={{
               background:
@@ -223,7 +221,7 @@ export default function DiffLockSection() {
             ))}
           </Box>
 
-          {/* RIGHT VENT - MASSIVE SIZE UPGRADE */}
+  
           <Box
             component="img"
             src="/image.png"
@@ -238,7 +236,7 @@ export default function DiffLockSection() {
           />
         </Stack>
 
-        {/* THE GRILL */}
+
         <Box
           sx={{
             width: { xs: "80%", md: "60%" },
