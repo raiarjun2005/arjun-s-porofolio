@@ -97,6 +97,14 @@ export default function HeroSection() {
             </Typography>
 
             <Button
+
+                    onClick={()=>{
+                        document.getElementById('projects-section')?.scrollIntoView({
+                            behavior:'smooth',
+                            block:'start'
+                        })
+                    }}
+
                 variant="contained"
                 sx={{ 
                     bgcolor: '#df6830',

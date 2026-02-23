@@ -10,7 +10,7 @@ const amgOrange = "#ff4d00";
 const myProjects = [
   {
     id: "001",
-    name: "Khewra FPO",
+    name: "Khewra FPO's Website",
     desc: "Khewra Farmers Producer Co. Ltd. is dedicated to enhancing farmer profitability through sustainable practices, modern inputs, and efficient value chains.",
     techStack: ["Next.js", "Tailwind"],
     specs: {
@@ -21,7 +21,7 @@ const myProjects = [
   },
   {
     id: "002",
-    name: "IMPEXMART",
+    name: "IMPEXMART's E-commerce Store",
     desc: "Modern e-commerce store and clothing brand with a high-end product catalog.",
     techStack: ["Shopify", "Liquid"],
     specs: {
@@ -32,7 +32,7 @@ const myProjects = [
   },
   {
     id: "003",
-    name: "Docloom",
+    name: "Docloom PDF Customizer",
     desc: "A collaborative digital experience project.",
     techStack: ["Next.js", "Firebase", "UI/UX"],
     specs: {
@@ -43,7 +43,7 @@ const myProjects = [
   },
   {
     id: "004",
-    name: "SnapGro",
+    name: "SnapGro Grocery Application",
     desc: "Modern e-commerce store and clothing brand with high-end product catalog.",
     techStack: ["React", "Tailwind", "Vercel"],
     specs: {
@@ -70,7 +70,9 @@ export default function ProjectsSection() {
   const handleCloseSpecs = () => setSelectedProject(null);
 
   return (
-    <Box sx={{ py: { xs: 10, md: 15 }, px: { xs: 2, md: 4, lg: 10 }, bgcolor: "#050505" }}>
+    <Box
+          id="projects-section"
+    sx={{ py: { xs: 10, md: 15 }, px: { xs: 2, md: 4, lg: 10 }, bgcolor: "#050505" }}>
       
       <Box sx={{ textAlign: "center", mb: 10 }}>
         <Typography sx={{ color: "grey.600", letterSpacing: 4, mb: 2, fontSize: { xs: "0.8rem", md: "1rem" }, textTransform: "uppercase", fontFamily: quicksand.style.fontFamily }}>
