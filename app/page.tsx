@@ -4,6 +4,7 @@ import ProjectsSection from "@/app/components/ProjectsSection";
 import SkillsEducation from './components/SkillsEducation';
 import DiffLockSection from './components/DiffLockSection';
 import IgnitionSection from './components/Ignition';
+import CommandCenter from './components/Commandcenter';
 const page = () => {
   return (
     <div>
@@ -11,7 +12,8 @@ const page = () => {
         <ProjectsSection/>
         <SkillsEducation/>
         <DiffLockSection/>
-        <IgnitionSection/>
+        {/* <IgnitionSection/> */}
+        <CommandCenter/>
     </div>
   )
 }

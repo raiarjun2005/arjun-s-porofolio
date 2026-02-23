@@ -62,7 +62,7 @@ export default function IgnitionSection() {
       {/* TRICK 2 & 3: The Engine Start Button */}
       <Box
         component="a"
-        href="mailto:g63.arjun@gmail.com" // Yahan apna asli email daal dena
+        href="mailto:g63.arjun@gmail.c" // Yahan apna asli email daal dena
         sx={{
           textDecoration: "none",
           width: { xs: "120px", md: "160px" },
