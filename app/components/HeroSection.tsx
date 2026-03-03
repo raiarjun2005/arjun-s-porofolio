@@ -127,25 +127,28 @@ export default function HeroSection() {
             >
                 Explore My Work
             </Button>
-
-            <Stack direction="row" spacing={4} sx={{ mt: { xs: 6, md: 8 } }}>
-                {[
-                    { icon: <GitHubIcon />, link: '#' },
-                    { icon: <LinkedInIcon />, link: 'https://www.linkedin.com/in/arjun-rai-63g/' },
-                    { icon: <EmailIcon />, link: '#' }
-                ].map((social, index) => (
-                    <IconButton 
-                        key={index}
-                        sx={{ 
-                            color: 'grey.700', 
-                            transition: 'all 0.3s ease', 
-                            '&:hover': { color: 'white', transform: 'scale(1.2)' } 
-                        }}
-                    >
-                        {social.icon}
-                    </IconButton>
-                ))}
-            </Stack>
+<Stack direction="row" spacing={4} sx={{ color:'white', mt: { xs: 6, md: 8 } }}>
+  {[
+    { icon: <GitHubIcon />, link: 'https://github.com/raiarjun2005' },
+    { icon: <LinkedInIcon />, link: 'https://www.linkedin.com/in/arjun-rai-63g' },
+    { icon: <EmailIcon />, link: 'mailto:rai.arjun2005@gmail.com' }
+  ].map((social, index) => (
+    <IconButton 
+      key={index}
+      component="a"
+      href={social.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{ 
+        color: 'grey.700', 
+        transition: 'all 0.3s ease', 
+        '&:hover': { color: 'white', transform: 'scale(1.2)' } 
+      }}
+    >
+      {social.icon}
+    </IconButton>
+  ))}
+</Stack>    
         </Box>
     );
 }

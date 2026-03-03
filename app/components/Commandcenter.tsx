@@ -151,55 +151,7 @@ export default function CommandCenter() {
       </Typography>
 
       {/* --- BOTTOM: THE REAR DIFFUSER (FOOTER) --- */}
-      <Box
-        sx={{
-          width: "100%",
-          borderTop: "1px solid rgba(255,255,255,0.05)",
-          pt: 4,
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          alignItems: "center",
-          justifyContent: "space-between",
-          px: { xs: 2, md: 10 },
-          zIndex: 2,
-        }}
-      >
-        <Typography
-          sx={{
-            color: "grey.600",
-            fontFamily: quicksand.style.fontFamily,
-            fontSize: "0.85rem",
-            mb: { xs: 2, md: 0 }
-          }}
-        >
-          Engineered by <Box component="span" sx={{ color: "white", fontWeight: "bold" }}>Rai63.</Box> © 2026
-        </Typography>
 
-        {/* Social Links (Placeholders - Add your own URLs) */}
-        <Stack direction="row" spacing={2}>
-          <Typography component="a" href="#" sx={{ color: "grey.600", "&:hover": { color: amgOrange }, transition: "0.3s", textDecoration: "none", fontSize: "0.85rem", fontFamily: quicksand.style.fontFamily }}>
-            GitHub
-          </Typography>
-          <Typography component="a" href="#" sx={{ color: "grey.600", "&:hover": { color: amgOrange }, transition: "0.3s", textDecoration: "none", fontSize: "0.85rem", fontFamily: quicksand.style.fontFamily }}>
-            LinkedIn
-          </Typography>
-          <Typography component="a" href="#" sx={{ color: "grey.600", "&:hover": { color: amgOrange }, transition: "0.3s", textDecoration: "none", fontSize: "0.85rem", fontFamily: quicksand.style.fontFamily }}>
-            Twitter
-          </Typography>
-        </Stack>
-      </Box>
-
-      {/* The background grill texture at the very bottom */}
-      <Box
-        sx={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: "8px",
-          background: "repeating-linear-gradient(45deg, #111, #111 5px, #222 5px, #222 10px)",
-        }}
-      />
     </Box>
   );
 }
