@@ -1,16 +1,14 @@
 "use client";
 import React from 'react';
 import { Box, Typography, Button, Stack, IconButton } from '@mui/material';
-import { Quicksand, Oswald } from 'next/font/google'; // 🔥 Added Oswald for industrial look
-
-// Icons
+import { Quicksand, Oswald } from 'next/font/google';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import EastIcon from '@mui/icons-material/East';
 
 const quicksand = Quicksand({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
-const oswald = Oswald({ subsets: ['latin'], weight: ['700'] }); // 🔥 Initialized strong industrial font
+const oswald = Oswald({ subsets: ['latin'], weight: ['700'] });
 const amgOrange = "#00BFFF"; 
 
 export default function HeroSection() {
@@ -22,12 +20,11 @@ export default function HeroSection() {
         color: 'white',
         position: 'relative',
         display: 'flex',
-        alignItems: 'center', // Vertically centers the content
+        alignItems: 'center',
         overflow: 'hidden',
         zIndex: 1,
       }}
     >
-      {/* --- SUBTLE BACKGROUND ACCENT --- */}
       <Box 
         sx={{ 
           position: 'absolute', right: '-10%', top: '20%', 
@@ -37,7 +34,6 @@ export default function HeroSection() {
         }} 
       />
 
-      {/* --- TOP BAR: GERMAN METADATA --- */}
       <Stack 
         direction="row" 
         justifyContent="space-between" 
@@ -51,17 +47,15 @@ export default function HeroSection() {
         </Typography>
       </Stack>
 
-      {/* --- MAIN CONTENT: CENTER-LEFT ALIGNED --- */}
       <Box 
         sx={{ 
-          ml: { xs: 3, md: 10, lg: 15 }, // Pushes content from the extreme left
+          ml: { xs: 3, md: 10, lg: 15 },
           maxWidth: '800px',
-          borderLeft: `3px solid ${amgOrange}`, // The solid anchor line
-          pl: { xs: 3, md: 5 }, // Padding from the line
+          borderLeft: `3px solid ${amgOrange}`,
+          pl: { xs: 3, md: 5 },
           zIndex: 2,
         }}
       >
-        {/* German Enthusiast Tagline */}
         <Typography 
           sx={{ 
             color: 'grey.400', 
@@ -76,7 +70,6 @@ export default function HeroSection() {
           Ingenieurskunst & Softwareentwicklung
         </Typography>
 
-        {/* Main Headline */}
         <Typography
           variant="h1"
           sx={{
@@ -86,13 +79,12 @@ export default function HeroSection() {
             lineHeight: 1,
             letterSpacing: '-0.03em',
             mb: 2,
-            ml: -0.5 // Optically align with the border
+            ml: -0.5
           }}
         >
           ARJUN<Box component="span" sx={{ color: amgOrange }}>.</Box>
         </Typography>
 
-        {/* Deep German Concept + English Translation */}
         <Typography 
           sx={{ 
             color: 'white', 
@@ -106,7 +98,6 @@ export default function HeroSection() {
           Digitale Handwerkskunst. <Box component="span" sx={{ color: 'grey.600', fontWeight: 400 }}>(Digital Craftsmanship)</Box>
         </Typography>
 
-        {/* Description */}
         <Typography
           sx={{
             color: 'grey.400',
@@ -120,7 +111,6 @@ export default function HeroSection() {
           I build high-performance, scalable applications with a strict focus on robust architecture and minimalist design. Driven by German precision, engineered for the modern web.
         </Typography>
 
-        {/* Authentic German Button */}
         <Button
           onClick={() => {
             document.getElementById('projects-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -129,7 +119,7 @@ export default function HeroSection() {
           sx={{ 
             bgcolor: 'white',
             color: 'black',
-            borderRadius: '0px', // Strict, sharp German edge
+            borderRadius: 0,
             px: { xs: 4, md: 5 }, 
             py: { xs: 1.5, md: 1.8 }, 
             fontWeight: 700, 
@@ -149,37 +139,34 @@ export default function HeroSection() {
         </Button>
       </Box>
 
-      {/* 🔥 --- RIGHT SIDE INDUSTRIAL RACING ACCENT --- 🔥 */}
       <Box
-  sx={{
-    display: { xs: 'none', lg: 'block' }, // Only show on desktop
-    position: 'absolute',
-    right: '16%',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    zIndex: 0,
-  }}
->
-  <Typography
-    sx={{
-      fontFamily: oswald.style.fontFamily, // ya greatVibes for cursive
-      fontSize: '8rem',
-      color: '00BFFF',
-    //   WebkitTextStroke: `2px rgba(255, 77, 0, 0.4)`,
-      fontStyle: 'italic',
-      textTransform: 'uppercase',
-      letterSpacing: '10px',
-      whiteSpace: 'pre-line', // 🔑 allows line breaks
-      pointerEvents: 'none',
-      userSelect: 'none',
-      opacity: 0.6,
-    }}
-  >
-    Präzision{'\n'}& Stil
-  </Typography>
-</Box>
+        sx={{
+          display: { xs: 'none', lg: 'block' },
+          position: 'absolute',
+          right: '16%',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          zIndex: 0,
+        }}
+      >
+        <Typography
+          sx={{
+            fontFamily: oswald.style.fontFamily,
+            fontSize: '8rem',
+            color: '#00BFFF',
+            fontStyle: 'italic',
+            textTransform: 'uppercase',
+            letterSpacing: '10px',
+            whiteSpace: 'pre-line',
+            pointerEvents: 'none',
+            userSelect: 'none',
+            opacity: 0.6,
+          }}
+        >
+          Präzision{'\n'}& Stil
+        </Typography>
+      </Box>
 
-      {/* --- BOTTOM SOCIALS: LEFT ALIGNED --- */}
       <Stack 
         direction="row" 
         spacing={2} 
@@ -195,7 +182,7 @@ export default function HeroSection() {
             sx={{ 
               color: 'grey.500', 
               border: '1px solid rgba(255,255,255,0.05)',
-              borderRadius: '0px', // Sharp
+              borderRadius: 0,
               p: 1.2,
               transition: 'all 0.2s',
               '&:hover': { color: 'white', borderColor: 'white', bgcolor: 'rgba(255,255,255,0.05)' } 
@@ -206,7 +193,6 @@ export default function HeroSection() {
         ))}
       </Stack>
 
-      {/* --- MASSIVE WATERMARK BACKGROUND --- */}
       <Typography
         sx={{
           position: 'absolute',
@@ -214,7 +200,7 @@ export default function HeroSection() {
           bottom: -40,
           fontSize: { xs: '10rem', md: '25rem' },
           fontWeight: 700,
-          color: 'rgba(255,255,255,0.02)', // Barely visible watermark
+          color: 'rgba(255,255,255,0.02)',
           fontFamily: quicksand.style.fontFamily,
           lineHeight: 0.8,
           pointerEvents: 'none',
