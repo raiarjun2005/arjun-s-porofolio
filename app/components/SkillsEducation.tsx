@@ -4,7 +4,7 @@ import { Box, Typography, Paper, Chip } from "@mui/material";
 import { Quicksand } from "next/font/google";
 
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["500", "700"] });
-const amgOrange = "#ff4d00";
+const amgOrange = "#00BFFF";
 
 // --- Animations for Marquee ---
 // Scrolling exactly half the width to create a seamless infinite loop

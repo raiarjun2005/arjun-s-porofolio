@@ -4,8 +4,8 @@ import { Box, Typography } from "@mui/material";
 import { Quicksand } from "next/font/google";
 
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["500", "700"] });
-const amgOrange = "#ff4d00";
-const amgRed = "#ff0000"; // Engine start button generally red hota hai
+const amgOrange = "#00BFFF";
+const amgRed = "#00BFFF"; // Engine start button generally red hota hai
 
 // Engine ka 'breathing' (pulse) animation
 const pulseGlow = {

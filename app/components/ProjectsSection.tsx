@@ -6,7 +6,7 @@ import { Quicksand } from "next/font/google";
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
-const amgOrange = "#ff4d00";
+const amgOrange = "#00BFFF";
 
 // --- Data with Image Placeholders added ---
 const myProjects = [
