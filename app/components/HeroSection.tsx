@@ -1,154 +1,229 @@
 "use client";
-
 import React from 'react';
 import { Box, Typography, Button, Stack, IconButton } from '@mui/material';
-import { Quicksand } from 'next/font/google';
+import { Quicksand, Oswald } from 'next/font/google'; // 🔥 Added Oswald for industrial look
 
+// Icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import EastIcon from '@mui/icons-material/East';
 
-const quicksand = Quicksand({ subsets: ['latin'], weight: ['500', '600', '700'] });
-
-const pulse = {
-    '0%': { boxShadow: '0 0 0 0px rgba(76, 175, 80, 0.7)' },
-    '70%': { boxShadow: '0 0 0 10px rgba(76, 175, 80, 0)' },
-    '100%': { boxShadow: '0 0 0 0px rgba(76, 175, 80, 0)' },
-};
+const quicksand = Quicksand({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
+const oswald = Oswald({ subsets: ['latin'], weight: ['700'] }); // 🔥 Initialized strong industrial font
+const amgOrange = "#00BFFF"; 
 
 export default function HeroSection() {
-    return (
-        <Box
-            sx={{
-                minHeight: '100vh',
-                background: `
-                    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0px, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 12px),
-                    linear-gradient(to bottom left, #262626 0%, #0d0d0d 50%, #000000 100%)
-                `,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                px: { xs: 3, md: 2 },
-                position: 'relative',
-                overflow: 'hidden'
-            }}
-        >
-            <Box
-                sx={{
-                    bgcolor: 'rgba(255, 255, 255, 0.03)',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    borderRadius: '50px',
-                    px: 2,
-                    py: 0.5,
-                    mb: 2,
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 1.5,
-                }}
-            >
-                <Box 
-                    sx={{ 
-                        width: 8, height: 8, 
-                        bgcolor: '#4caf50', 
-                        borderRadius: '50%',
-                        animation: 'pulse 2s infinite',
-                        '@keyframes pulse': pulse
-                    }} 
-                />
-                <Typography sx={{ color: 'grey.400', fontSize: '0.7rem', fontWeight: 'bold', letterSpacing: 1.5, textTransform: 'uppercase', fontFamily: quicksand.style.fontFamily }}>
-                    Available for new projects
-                </Typography>
-            </Box>
-
-            <Typography variant="h6" sx={{ color: 'grey.600', letterSpacing: 3, mb: 1, fontSize: '0.9rem', fontFamily: quicksand.style.fontFamily }}>
-                WELCOME TO MY SPACE
-            </Typography>
-
-            <Typography
-                variant="h1"
-                sx={{
-                    fontWeight: 800,
-                    textAlign: 'center',
-                    fontFamily: quicksand.style.fontFamily,
-                    fontSize: { xs: '3.8rem', md: '6.5rem' },
-                    lineHeight: 1,
-                    mb: 2
-                }}
-            >
-                <Box component="span" sx={{ color: 'white' }}>Rai</Box>
-                <Box component="span" sx={{ color: '#df6830', textShadow: '0px 0px 15px rgba(223, 104, 48, 0.3)' }}>63.</Box>
-            </Typography>
-
-            <Typography
-                sx={{
-                    color: 'grey.400',
-                    maxWidth: '550px',
-                    textAlign: 'center',
-                    lineHeight: 1.8,
-                    mb: 5,
-                    fontFamily: quicksand.style.fontFamily,
-                    fontSize: { xs: '0.95rem', md: '1.1rem' }
-                }}
-            >
-                Engineering scalable web and mobile applications <br /> 
-                that solve real-world problems.
-            </Typography>
-
-            <Button
-
-                    onClick={()=>{
-                        document.getElementById('projects-section')?.scrollIntoView({
-                            behavior:'smooth',
-                            block:'start'
-                        })
-                    }}
-
-                variant="contained"
-                sx={{ 
-                    bgcolor: '#df6830',
-                    color: 'white',
-                    borderRadius: '50px', 
-                    px: { xs: 4, md: 6 }, 
-                    py: { xs: 1.5, md: 2 }, 
-                    fontWeight: 'bold', 
-                    fontSize: '1rem',
-                    fontFamily: quicksand.style.fontFamily,
-                    boxShadow: '0px 8px 25px rgba(223, 104, 48, 0.4)', 
-                    transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
-                    textTransform: 'none',
-                    '&:hover': {
-                        bgcolor: '#c25725',
-                        boxShadow: '0px 12px 35px rgba(223, 104, 48, 0.6)',
-                        transform: 'translateY(-4px)'
-                    }
-                }}
-            >
-                Explore My Work
-            </Button>
-<Stack direction="row" spacing={4} sx={{ color:'white', mt: { xs: 6, md: 8 } }}>
-  {[
-    { icon: <GitHubIcon />, link: 'https://github.com/raiarjun2005' },
-    { icon: <LinkedInIcon />, link: 'https://www.linkedin.com/in/arjun-rai-63g' },
-    { icon: <EmailIcon />, link: 'mailto:rai.arjun2005@gmail.com' }
-  ].map((social, index) => (
-    <IconButton 
-      key={index}
-      component="a"
-      href={social.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      sx={{ 
-        color: 'grey.700', 
-        transition: 'all 0.3s ease', 
-        '&:hover': { color: 'white', transform: 'scale(1.2)' } 
+  return (
+    <Box
+      sx={{
+        minHeight: '100vh',
+        bgcolor: '#050505',
+        color: 'white',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center', // Vertically centers the content
+        overflow: 'hidden',
+        zIndex: 1,
       }}
     >
-      {social.icon}
-    </IconButton>
-  ))}
-</Stack>    
-        </Box>
-    );
+      {/* --- SUBTLE BACKGROUND ACCENT --- */}
+      <Box 
+        sx={{ 
+          position: 'absolute', right: '-10%', top: '20%', 
+          width: '50vw', height: '50vw', 
+          background: `radial-gradient(circle, rgba(255, 77, 0, 0.03) 0%, transparent 60%)`, 
+          zIndex: -1 
+        }} 
+      />
+
+      {/* --- TOP BAR: GERMAN METADATA --- */}
+      <Stack 
+        direction="row" 
+        justifyContent="space-between" 
+        sx={{ position: 'absolute', top: 40, left: { xs: 24, md: 80 }, right: { xs: 24, md: 80 }, zIndex: 2 }}
+      >
+        <Typography sx={{ color: 'grey.600', fontSize: '0.65rem', letterSpacing: 3, fontFamily: 'monospace', textTransform: 'uppercase' }}>
+          System_Status: <Box component="span" sx={{ color: amgOrange }}>Bereit</Box>
+        </Typography>
+        <Typography sx={{ color: 'grey.600', fontSize: '0.65rem', letterSpacing: 3, fontFamily: 'monospace', textTransform: 'uppercase' }}>
+          Standort // Neu-Delhi
+        </Typography>
+      </Stack>
+
+      {/* --- MAIN CONTENT: CENTER-LEFT ALIGNED --- */}
+      <Box 
+        sx={{ 
+          ml: { xs: 3, md: 10, lg: 15 }, // Pushes content from the extreme left
+          maxWidth: '800px',
+          borderLeft: `3px solid ${amgOrange}`, // The solid anchor line
+          pl: { xs: 3, md: 5 }, // Padding from the line
+          zIndex: 2,
+        }}
+      >
+        {/* German Enthusiast Tagline */}
+        <Typography 
+          sx={{ 
+            color: 'grey.400', 
+            fontSize: { xs: '0.75rem', md: '0.85rem' }, 
+            fontWeight: 600, 
+            letterSpacing: 4, 
+            textTransform: 'uppercase', 
+            fontFamily: quicksand.style.fontFamily,
+            mb: 2
+          }}
+        >
+          Ingenieurskunst & Softwareentwicklung
+        </Typography>
+
+        {/* Main Headline */}
+        <Typography
+          variant="h1"
+          sx={{
+            fontWeight: 700,
+            fontFamily: quicksand.style.fontFamily,
+            fontSize: { xs: '4rem', md: '7rem', lg: '8.5rem' },
+            lineHeight: 1,
+            letterSpacing: '-0.03em',
+            mb: 2,
+            ml: -0.5 // Optically align with the border
+          }}
+        >
+          ARJUN<Box component="span" sx={{ color: amgOrange }}>.</Box>
+        </Typography>
+
+        {/* Deep German Concept + English Translation */}
+        <Typography 
+          sx={{ 
+            color: 'white', 
+            fontSize: { xs: '1rem', md: '1.25rem' }, 
+            fontWeight: 600, 
+            letterSpacing: 1, 
+            fontFamily: quicksand.style.fontFamily,
+            mb: 2
+          }}
+        >
+          Digitale Handwerkskunst. <Box component="span" sx={{ color: 'grey.600', fontWeight: 400 }}>(Digital Craftsmanship)</Box>
+        </Typography>
+
+        {/* Description */}
+        <Typography
+          sx={{
+            color: 'grey.400',
+            lineHeight: 1.8,
+            fontFamily: quicksand.style.fontFamily,
+            fontSize: { xs: '0.95rem', md: '1.1rem' },
+            maxWidth: '600px',
+            mb: 5
+          }}
+        >
+          I build high-performance, scalable applications with a strict focus on robust architecture and minimalist design. Driven by German precision, engineered for the modern web.
+        </Typography>
+
+        {/* Authentic German Button */}
+        <Button
+          onClick={() => {
+            document.getElementById('projects-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }}
+          endIcon={<EastIcon sx={{ ml: 1, fontSize: '1.2rem !important', transition: 'transform 0.3s ease' }} />}
+          sx={{ 
+            bgcolor: 'white',
+            color: 'black',
+            borderRadius: '0px', // Strict, sharp German edge
+            px: { xs: 4, md: 5 }, 
+            py: { xs: 1.5, md: 1.8 }, 
+            fontWeight: 700, 
+            fontSize: '0.85rem',
+            letterSpacing: 2,
+            fontFamily: quicksand.style.fontFamily,
+            textTransform: 'uppercase',
+            transition: 'all 0.3s ease',
+            '&:hover': {
+              bgcolor: amgOrange,
+              color: 'white',
+              '& .MuiButton-endIcon': { transform: 'translateX(5px)' }
+            }
+          }}
+        >
+          Projekte Ansehen
+        </Button>
+      </Box>
+
+      {/* 🔥 --- RIGHT SIDE INDUSTRIAL RACING ACCENT --- 🔥 */}
+      <Box
+  sx={{
+    display: { xs: 'none', lg: 'block' }, // Only show on desktop
+    position: 'absolute',
+    right: '16%',
+    top: '50%',
+    transform: 'translateY(-50%)',
+    zIndex: 0,
+  }}
+>
+  <Typography
+    sx={{
+      fontFamily: oswald.style.fontFamily, // ya greatVibes for cursive
+      fontSize: '8rem',
+      color: '00BFFF',
+    //   WebkitTextStroke: `2px rgba(255, 77, 0, 0.4)`,
+      fontStyle: 'italic',
+      textTransform: 'uppercase',
+      letterSpacing: '10px',
+      whiteSpace: 'pre-line', // 🔑 allows line breaks
+      pointerEvents: 'none',
+      userSelect: 'none',
+      opacity: 0.6,
+    }}
+  >
+    Präzision{'\n'}& Stil
+  </Typography>
+</Box>
+
+      {/* --- BOTTOM SOCIALS: LEFT ALIGNED --- */}
+      <Stack 
+        direction="row" 
+        spacing={2} 
+        sx={{ position: 'absolute', bottom: 40, left: { xs: 24, md: 80 }, zIndex: 2 }}
+      >
+        {[
+          { icon: <GitHubIcon fontSize="small" />, link: '#' },
+          { icon: <LinkedInIcon fontSize="small" />, link: '#' },
+          { icon: <EmailIcon fontSize="small" />, link: '#' }
+        ].map((social, index) => (
+          <IconButton 
+            key={index}
+            sx={{ 
+              color: 'grey.500', 
+              border: '1px solid rgba(255,255,255,0.05)',
+              borderRadius: '0px', // Sharp
+              p: 1.2,
+              transition: 'all 0.2s',
+              '&:hover': { color: 'white', borderColor: 'white', bgcolor: 'rgba(255,255,255,0.05)' } 
+            }}
+          >
+            {social.icon}
+          </IconButton>
+        ))}
+      </Stack>
+
+      {/* --- MASSIVE WATERMARK BACKGROUND --- */}
+      <Typography
+        sx={{
+          position: 'absolute',
+          right: -20,
+          bottom: -40,
+          fontSize: { xs: '10rem', md: '25rem' },
+          fontWeight: 700,
+          color: 'rgba(255,255,255,0.02)', // Barely visible watermark
+          fontFamily: quicksand.style.fontFamily,
+          lineHeight: 0.8,
+          pointerEvents: 'none',
+          zIndex: -1,
+          userSelect: 'none'
+        }}
+      >
+        63
+      </Typography>
+    </Box>
+  );
 }
