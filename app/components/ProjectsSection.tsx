@@ -15,7 +15,7 @@ const myProjects = [
     name: "Khewra FPO",
     desc: "Dedicated to enhancing farmer profitability through sustainable practices and efficient value chains.",
     techStack: ["Next.js", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=800&auto=format&fit=crop", // Replace with your SS
+    image: "/khewra.png", // Replace with your SS
     specs: {
       obstacle: "Digitizing a traditional Farmer Producer Organization (FPO). The challenge was to create an interface that is extremely fast, accessible, and not intimidating for users transitioning from offline to digital supply chains.",
       architecture: "Engineered a highly responsive frontend using Next.js for fast server-side rendering (SSR) and SEO. Utilized Tailwind CSS to rapidly prototype and scale the UI components without bloat.",
@@ -27,7 +27,7 @@ const myProjects = [
     name: "IMPEXMART",
     desc: "Modern e-commerce store and clothing brand with a high-end product catalog.",
     techStack: ["Shopify", "Liquid"],
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop", // Replace with your SS
+    image: "/imp.png", // Replace with your SS
     specs: {
       obstacle: "Building a premium e-commerce experience that handles high-res product catalogs without compromising on load times or mobile responsiveness.",
       architecture: "Customized the Shopify Liquid architecture to strip away redundant scripts. Optimized the checkout funnel and integrated dynamic inventory rendering for real-time stock updates.",
@@ -39,7 +39,7 @@ const myProjects = [
     name: "Docloom",
     desc: "A collaborative digital workspace and real-time PDF customizer.",
     techStack: ["Next.js", "Firebase", "UI/UX"],
-    image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=800&auto=format&fit=crop", // Replace with your SS
+    image: "/docloom.png", // Replace with your SS
     specs: {
       obstacle: "Creating a seamless collaborative environment where users can interact with real-time data syncing without encountering race conditions or data overlap.",
       architecture: "Integrated Firebase real-time database with a Next.js frontend. Structured the data nodes to handle concurrent read/writes efficiently, paired with a highly intuitive UI/UX design.",
@@ -51,7 +51,7 @@ const myProjects = [
     name: "SnapGro",
     desc: "High-speed grocery application with an edge-cached catalog.",
     techStack: ["React", "Tailwind", "Vercel"],
-    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop", // Replace with your SS
+    image: "/snp.png", // Replace with your SS
     specs: {
       obstacle: "Deploying a highly visual e-commerce catalog that requires rapid updates and instant content delivery across global edge networks.",
       architecture: "Built a modular React single-page application (SPA) styled with Tailwind for component consistency. Configured automated CI/CD pipelines through Vercel for instant deployments.",
