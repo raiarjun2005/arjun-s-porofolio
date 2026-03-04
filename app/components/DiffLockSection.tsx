@@ -4,7 +4,7 @@ import { Box, Typography, Stack, Collapse } from "@mui/material";
 import { Quicksand } from "next/font/google";
 
 const quicksand = Quicksand({ subsets: ["latin"], weight: ["500", "700"] });
-const amgOrange = "#ff4d00";
+const amgOrange = "#00BFFF";
 
 const lockData = [
   { id: 1, title: "FRONT END", skills: "MUI // Next.js // Tailwind" },
