@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arjun's Portfolio | Mobile & Web App Developer | Rai63", 
+  title: "Arjun Rai | Mobile & Web App Developer | Rai63", 
   description: "Engineering scalable web and mobile applications.",
 };
 
