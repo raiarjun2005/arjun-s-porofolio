@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arjun's Portfolio | Rai63", // Thoda premium title
+  title: "Arjun's Portfolio | Mobile & Web App Developer | Rai63", 
   description: "Engineering scalable web and mobile applications.",
 };
 
@@ -27,9 +27,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ backgroundColor: '#050505', color: 'white' }} // Background flash rokne ke liye
+        style={{ backgroundColor: '#050505', color: 'white' }}
       >
-        {/* MUI SSR CACHE WRAPPER - Ab Hydration Error nahi aayega! */}
         <AppRouterCacheProvider>
           {children}
         </AppRouterCacheProvider>

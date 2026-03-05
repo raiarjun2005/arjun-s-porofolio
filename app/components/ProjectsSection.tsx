@@ -22,20 +22,8 @@ const myProjects = [
       output: "Delivered a scalable, high-performance web platform that bridges the gap between modern agricultural inputs and local farmers, streamlining their digital value chain."
     }
   },
-  {
+    {
     id: "002",
-    name: "IMPEXMART",
-    desc: "Modern e-commerce store and clothing brand with a high-end product catalog.",
-    techStack: ["Shopify", "Liquid"],
-    image: "/imp.png", // Replace with your SS
-    specs: {
-      obstacle: "Building a premium e-commerce experience that handles high-res product catalogs without compromising on load times or mobile responsiveness.",
-      architecture: "Customized the Shopify Liquid architecture to strip away redundant scripts. Optimized the checkout funnel and integrated dynamic inventory rendering for real-time stock updates.",
-      output: "A sleek, conversion-optimized storefront that provides a frictionless shopping experience, matching the brand's premium identity."
-    }
-  },
-  {
-    id: "003",
     name: "Docloom",
     desc: "A collaborative digital workspace and real-time PDF customizer.",
     techStack: ["Next.js", "Firebase", "UI/UX"],
@@ -46,6 +34,19 @@ const myProjects = [
       output: "A fluid, real-time collaborative workspace that updates instantaneously, providing users with a zero-latency digital experience."
     }
   },
+  {
+    id: "003",
+    name: "IMPEXMART",
+    desc: "Modern e-commerce store and clothing brand with a high-end product catalog.",
+    techStack: ["Shopify", "Liquid"],
+    image: "/imp.png", // Replace with your SS
+    specs: {
+      obstacle: "Building a premium e-commerce experience that handles high-res product catalogs without compromising on load times or mobile responsiveness.",
+      architecture: "Customized the Shopify Liquid architecture to strip away redundant scripts. Optimized the checkout funnel and integrated dynamic inventory rendering for real-time stock updates.",
+      output: "A sleek, conversion-optimized storefront that provides a frictionless shopping experience, matching the brand's premium identity."
+    }
+  },
+
   {
     id: "004",
     name: "SnapGro",
