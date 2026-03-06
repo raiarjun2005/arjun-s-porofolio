@@ -11,7 +11,7 @@ const accentColor = "#00BFFF"; // Bavarian Tech Blue
 const educationData = [
   {
     id: "EDU-01",
-    degree: "Online Degree Program (BCA/MCA)", // 🔥 Edit this to your exact degree
+    degree: "Bachelor of Computer Application (BCA)", // 🔥 Edit this to your exact degree
     institution: "Manipal University Jaipur (Online)",
     year: "2026 - Present",
     status: "In Progress",
