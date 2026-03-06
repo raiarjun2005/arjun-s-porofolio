@@ -26,13 +26,13 @@ const educationData = [
     description: "Comprehensive foundation in Information Technology, covering programming concepts, web design, and systems architecture."
   },
   {
-    id: "EDU-03",
-    degree: "Higher Secondary / Bachelor's", // 🔥 Edit this to your Delhi college/school
-    institution: "Delhi University / XYZ School", 
-    year: "2020 - 2022",
-    status: "Completed",
-    description: "Core focus on Mathematics and Computer Science. Built a strong foundation in logical reasoning and computational thinking."
-  }
+  //   id: "EDU-03",
+  //   degree: "Higher Secondary / Bachelor's", // 🔥 Edit this to your Delhi college/school
+  //   institution: "Delhi University / XYZ School", 
+  //   year: "2020 - 2022",
+  //   status: "Completed",
+  //   description: "Core focus on Mathematics and Computer Science. Built a strong foundation in logical reasoning and computational thinking."
+  // }
 ];
 
 export default function EducationSection() {
