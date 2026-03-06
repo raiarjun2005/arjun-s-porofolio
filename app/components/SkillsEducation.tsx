@@ -25,7 +25,7 @@ const educationData = [
     status: "Completed",
     description: "Comprehensive foundation in Information Technology, covering programming concepts, web design, and systems architecture."
   },
-  {
+  // {
   //   id: "EDU-03",
   //   degree: "Higher Secondary / Bachelor's", // 🔥 Edit this to your Delhi college/school
   //   institution: "Delhi University / XYZ School", 
