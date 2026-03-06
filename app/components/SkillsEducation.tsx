@@ -13,7 +13,7 @@ const educationData = [
     id: "EDU-01",
     degree: "Online Degree Program (BCA/MCA)", // 🔥 Edit this to your exact degree
     institution: "Manipal University Jaipur (Online)",
-    year: "2023 - Present",
+    year: "2026 - Present",
     status: "In Progress",
     description: "Focusing on advanced software engineering principles, modern web architectures, and scalable application development."
   },
