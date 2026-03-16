@@ -14,8 +14,8 @@ const amgOrange = "#ff4d00";
 const certifications = [
   { 
     id: "AWS-SA-2025", 
-    title: "AWS Certified Solutions Architect", 
-    issuer: "Amazon Web Services", 
+    title: "Getting Started With Dart", 
+    issuer: "Google Cloud", 
     date: "MAR 2025",
     credentialId: "AWS-987654321",
     // Placeholder image - replace with your actual certificate screenshot
@@ -24,8 +24,8 @@ const certifications = [
   },
   { 
     id: "META-FE-2024", 
-    title: "Meta Front-End Professional", 
-    issuer: "Meta Platforms Inc.", 
+    title: "Introduction to Dart", 
+    issuer: "Google Cloud", 
     date: "DEC 2024",
     credentialId: "META-123456789",
     image: "/dart.png", 
